@@ -1,0 +1,19 @@
+.scroll {  
+  display: block;
+  position: absolute;  
+  top: 90%;
+  left: 50%;
+  transform: translate(0%, -100%);
+  color: white;
+  display: flex;  
+  align-items: center;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.scroll__pic {
+  width: 22px;
+  fill: white;
+}

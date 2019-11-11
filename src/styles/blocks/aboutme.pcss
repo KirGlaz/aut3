@@ -1,0 +1,99 @@
+.aboutme {
+  position: relative;
+  color: white;
+  padding: 60px 0px 0px 0px;
+}
+
+.aboutme__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.user-pic {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.user-info {
+  display: flex;
+}
+
+.info {
+  color: #494b4c;
+}
+
+.info__list,
+.infoabout__list {
+  font-weight: 600;
+}
+
+.info__text,
+.infoabout__text {
+  margin-bottom: 32px;
+}
+
+.infoabout {
+  padding-left: 54px;  
+}
+
+.infoabout__list {
+  @include desktop {
+    width: 135px;
+  }
+}
+
+.aboutme__left {
+  width: 288px;
+  @include phones {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+.user-pic {
+  margin-bottom: 78px;
+}
+
+.aboutme__right {
+  width: 542px;
+  margin-left: 142px;
+  @include tablets-castomslider {
+    margin-left: 10px;    
+  }
+
+  @include phones {
+    margin-left: 0px;
+    width: 300px;
+  }
+}
+
+.metitle {
+  @include phones {
+    text-align: center;
+  }
+}
+
+.metitle__greeting {
+  margin-bottom: 32px;
+  color: #a7a8a8;
+}
+
+.metitle__name {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.metext__up {
+  margin-bottom: 104px;
+  @include phones {
+    margin-bottom: 50px;
+  }
+}

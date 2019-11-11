@@ -1,0 +1,11 @@
+#menu.menu
+    .menu__container
+        +nav('nav-phone', 'nav-phone-container')
+        .socials-phone
+            - var socials = [{"icon": 'insta', 'link': "https://www.instagram.com/kir.sg/"}, {"icon": 'vk', 'link': "https://vk.com/kirglaz"}, {"icon": "github", 'link': "https://github.com/KirGlaz"}]
+                ul.socials-phone__list
+                    each item in socials
+                        li.socials-phone__item
+                            a(href=item.link)
+                                +icon(item.icon, "socials__link-pic")
+    a#closebtn.close

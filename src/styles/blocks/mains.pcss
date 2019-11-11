@@ -1,0 +1,38 @@
+.main {   
+  position: relative;  
+  color: white;
+  padding-top: 63px;
+}
+
+.main__container {
+  height: 100%;
+}
+
+.main__content {  
+  margin-top: 320px;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.title-name {  
+  font-weight: 700;
+  font-size: 72px;
+}
+
+.name {
+  margin-left: 20px; 
+  width: 290px;
+  line-height: 1; 
+}  
+
+.title-site {
+  color: #969390;
+  width: 160px;
+  font-size: 18px;
+}

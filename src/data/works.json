@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "title": "Сайт школы онлайн образования",
+      "techs": "Html, Css, JavaScript",
+      "photo": "work1.jpg",
+      "link": "//google.com",
+      "description": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+    },
+    {
+      "id": 2,
+      "title": "Сайт Коворкинга",
+      "techs": "Html, Css, JavaScript, JQery",
+      "photo": "work2.jpg",
+      "link": "//yandex.ru",
+      "description": "Этот сайт тоже сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+    },
+    {
+      "id": 3,
+      "title": "Сайт свёрстанный по одному из шаблонов",
+      "techs": "Html, Css, JavaScript, Webpack",
+      "photo": "work3.jpg",
+      "link": "//rambler.ru",
+      "description": "Этот сайт был сделан самостоятельно"
+    },
+    {
+      "id": 4,
+      "title": "Сайт свёрстанный по одному из шаблонов",
+      "techs": "Html, Css, JavaScript, Webpack",
+      "photo": "work4.jpg",
+      "link": "//rambler.ru",
+      "description": "Этот сайт также был сделан самостоятельно"
+    }
+  ]

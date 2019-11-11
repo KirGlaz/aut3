@@ -1,0 +1,22 @@
+script(type="text/x-template")#speak-list
+    .speak-container
+        .speak__top
+            h3.title.speak__title Что обо мне говорят
+            .speak__arrows                
+                button.speak-btn--left
+                    +icon('arrow-down', 'sbtn sbtn-left')                
+                button.speak-btn--right
+                    +icon('arrow-down', 'sbtn sbtn-right')
+        .speak__items
+            swiper(ref="mySwiper" :options="swiperOption")
+                comment-item(v-for="item in comments" :item="item")
+
+script(type="text/x-template")#speak-item
+    swiper-slide
+        .speak__item            
+            .speak__item-text.text {{ item.text }}
+            .speak__item-about
+                img.speak__item-photo(:src="item.photo")
+                .speak__item-info
+                    .speak__item-name {{  item.name }}
+                    .speak__item-position.text {{ item.position }}

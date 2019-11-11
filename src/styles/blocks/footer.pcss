@@ -1,0 +1,175 @@
+.footer {
+  height: 371px;
+  background-color: #222427;
+  color: white;
+  padding-top: 86px;
+  @include desktop-castom {
+    height: 485px;
+    padding-top: 60px;
+  }
+  @include tablets-castom {
+    padding-top: 20px;
+  }
+  @include phones {
+    height: 740px;
+    padding-top: 65px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__left {
+  display: flex;
+  min-width: 172px;
+  @include desktop-castomone {
+    flex-direction: column;
+  }
+}
+
+.copyright {
+  color: #47484a;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.footer__name {
+  width: 134px;
+  margin-left: 63px;
+  @include desktop-castomone {
+    margin-left: 0px;
+    width: 152px;
+  }
+  @include phones {
+    width: 260px;
+  }
+}
+
+.footer__title-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 35px;
+  @include desktop-castomone {
+    margin-bottom: 30px;
+  }
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__content {
+  margin-left: 142px;
+  @include desktop-castomone {
+    margin-left: 40px;
+  }
+  @include phones {
+    margin-left: 0;
+  }
+}
+
+.nav__footer {
+  @include tablets {
+    width: 450px;
+  }
+  @include tablets-castomone {
+    width: 200px;
+  }
+  @include phones {
+    width: 218px;
+  }
+}
+
+.footer__info {
+  margin-top: 70px;
+  display: flex;
+  @include desktop-castom {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+
+.site-name {
+  color: #47484a;
+}
+
+.footer__info-block {
+  width: 400px;
+  @include desktop-castom {
+    margin-bottom: 60px;
+  }
+  @include tablets {
+    width: 470px;
+    margin-bottom: 30px;
+  }
+  @include tablets-castom {
+    width: 252px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__text {
+  margin-bottom: 30px;
+  color: #47484a;
+}
+
+
+.footer__link-pic {
+  width: 23px;
+  height: 23px;
+  fill: #6f6b67;
+}
+
+.footer__link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #6f6b67;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border: 1px solid #d6841f;
+  }
+
+  &:hover .footer__link-pic {
+    fill: #d6841f;
+  }
+}
+
+.footer__autor {
+  font-style: italic;
+}
+
+.footer__socials-list {
+  display: flex;
+}
+
+.footer__socials-item {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+  @include tablets {
+    margin-left: 44px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+.socials__link-pic {
+  width: 28px;
+  fill: #6f6b67;
+
+  &:hover {
+    fill: #d7861f;
+  }
+}

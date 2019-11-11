@@ -1,0 +1,14 @@
+{
+  "text-color": "#414c63",
+  "links-color": "#4b6fd7",
+  "bp-desktop-hd": "1800px",
+  "bp-desktop": "1200px",
+  "bp-paralax": "1286px",
+  "bp-desktop-castomone": "1270px",
+  "bp-desktop-castom": "1099px",
+  "bp-tablets": "768px",
+  "bp-tablets-castomslider": "690px",
+  "bp-tablets-castomone": "590px",
+  "bp-tablets-castom": "550px",
+  "bp-phones": "480px"
+}

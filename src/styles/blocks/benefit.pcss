@@ -1,0 +1,106 @@
+.benefit {
+  background: url('../images/content/benefitbg.png') center center / cover no-repeat;
+  position: relative;
+  color: white;
+  padding: 60px 0px 0px 0px;
+  min-height: 1018px;
+
+  &::before {
+    content: '';
+    background-image: url('../images/content/hands.png');
+    width: 664px;
+    height: 940px;
+    background-size: cover;
+    position: absolute;
+    top: 12%;
+    left: -7%;
+    @include desktop {
+      width: 664px;
+      height: 940px;
+      top: 7%;
+      left: -11%;
+    }
+    @include desktop-castom {
+      width: 410px;
+      height: 600px;
+      transform: rotate(270deg);
+      left: 20%;
+      top: 515px;
+    }
+    @include tablets {
+      width: 352px;
+    height: 500px;
+      transform: rotate(270deg);
+      left: 19%;
+      top: 590px;
+    }
+    @include phones {
+      width: 170px;
+      height: 250px;
+      transform: rotate(270deg);
+      left: 20%;
+      top: 808px;
+    }
+  }
+}
+
+.benefit__container {
+  @include desktop-castom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.benefit__content {
+  @include desktop-castom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include phones {
+  }
+}
+
+.useful {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  margin-left: 34%;
+  margin-bottom: 91px;
+  @include desktop-castom {
+    margin-left: 0%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  @include tablets {
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @include tablets-castom {
+    margin-bottom: 40px;
+  }
+  @include phones {
+    text-align: inherit;
+    align-items: inherit;
+    justify-self: stretch;
+  }
+}
+
+.useful__title {
+  margin-bottom: 58px;
+  @include tablets {
+    width: 284px;
+    margin-bottom: 30px;
+  }
+}
+
+.useful__text {
+  color: #a9a8a8;
+  @include tablets-castom {
+    width: 375px;
+  }
+  @include phones {
+    width: 300px;
+  }
+}

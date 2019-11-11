@@ -1,0 +1,88 @@
+.skills {
+  display: flex;
+  margin-left: 43%;
+  flex-direction: column;
+  @include desktop-castom {
+    margin-left: 0%;
+  }
+  @include phones {
+    flex-flow: wrap;
+    width: 260px;
+    justify-content: center;
+  }
+}
+
+.skills-title {
+  margin-left: 43%;
+  font-weight: 700;
+  font-size: 24px;
+  @include desktop-castom {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 0%;
+  }
+}
+
+.skill__shape {
+  width: 143px;
+  height: 143px;
+  transform: rotate(-180deg);
+  @include tablets-castom {
+    width: 100px;
+    height: 100px;
+  }
+  @include phones {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.skill {
+  position: relative;
+  text-align: center;
+}
+
+.skill__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.skills-row__list {
+  display: flex;
+  @include phones {
+    flex-flow: wrap;
+    width: 260px;
+    justify-content: center;
+  }
+}
+
+.skills-row__item {
+  position: relative;
+  text-align: center;
+}
+
+.circle__under {
+  fill: transparent;
+  stroke-width: 4px;
+  stroke: #444345;
+}
+
+.circle__above {
+  fill: transparent;
+  stroke-width: 10px;  
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke: #d6831f;  
+}
+
+
+.skill__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}

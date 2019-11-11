@@ -1,0 +1,68 @@
+.paralax-section {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1b1f22;
+
+  @include paralax {     
+    background: url('../images/content/trainbg.png') center center / cover no-repeat;
+  }
+}
+
+.paralax-section__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  @include paralax {
+    display: none;
+  }
+
+  &:nth-child(1) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:nth-child(2) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 290px;
+  }
+
+  &:nth-child(3) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 400px;
+  }
+
+  &:nth-child(4) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 650px;
+  }
+
+  &:nth-child(5) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 701px;
+  }
+
+  &:nth-child(6) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 763px;
+  }
+}
+
+.paralax {
+  position: absolute;
+}
+

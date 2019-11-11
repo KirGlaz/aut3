@@ -1,0 +1,62 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Portfolio | main page    
+  body
+    .wrapper
+      .maincontent
+        .paralax-section
+          .paralax-section__layer(data-speed="0.1")
+            +image('content/sky.png', 'paralax')
+          .paralax-section__layer(data-speed="0.14")
+            +image('content/mountain.png', 'paralax')
+          .paralax-section__layer(data-speed="0.16")
+            +image('content/train.png', 'paralax')
+          .paralax-section__layer(data-speed="0.19")
+            +image('content/grass.png', 'paralax')
+          .paralax-section__layer(data-speed="0.12")
+            +image('content/bg1.png', 'paralax')
+          .paralax-section__layer(data-speed="0.08")
+            +image('content/bg2.png', 'paralax')                                     
+          section#s1.fullscreen-section.main
+            .container.main__container          
+              include ./components/header.pug                     
+              include ./components/main__content.pug                                   
+              include ./components/scroll.pug 
+          section#s2.aboutme
+            .container.aboutme__container
+              include ./components/aboutme__content.pug
+        section#s3.benefit                                      
+          .container.benefit__container
+            .benefit__content             
+              include ./components/useful.pug                
+              #skills-component 
+              include ./components/skills.pug                        
+        section#s4.works
+          .container.works__container 
+            h2.title.title-works Мои Работы
+            .works__content
+              #slider-component         
+              include ./components/work.pug 
+        .bg-section
+          +image('content/leaves.png', 'leaves')
+          section#speak.speak
+            .container.speak__container
+              #vue-reviews             
+              include ./components/comments.pug            
+          section#s6.mail
+            .container.mail__container
+              include ./components/mail-content.pug
+        footer.footer  
+          .container.footer__container    
+            include ./components/copyright.pug
+            .footer__content
+              +nav('nav', 'nav__footer', ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
+              include ./components/footer__info.pug  
+      include ./components/hamburger.pug  
+      include ./components/menu-phone.pug                          

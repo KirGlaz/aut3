@@ -1,0 +1,155 @@
+.comments {
+  position: relative;
+  color: white;
+  padding: 150px 0px 0px 0px;
+}
+
+.speak-container {
+  padding-top: 60px;
+}
+
+.slider-speak {
+  @include tablets-castomslider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.speak__top {
+  display: flex;
+  margin-bottom: 100px;
+  color: white;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+.speak__title {
+  margin-right: 127px;
+  @include desktop-castom {
+    margin-right: 20px;
+  }
+  @include tablets {
+    text-align: center;
+  }
+  @include phones {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.speak__arrows {
+  display: flex;
+}
+
+.speak-btn--disabled {  
+  border: 2px solid #d6841f;
+}
+
+.speak-btn--left,
+.speak-btn--right {
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 30px;
+
+  &:hover {
+    border: 2px solid #d6841f;    
+  }
+  &:hover .sbtn {
+    fill: #d6841f;
+  }
+}
+
+.sbtn {
+  width: 8px;
+  height: 12px;
+  fill: white;
+}
+
+.btn-left {
+  margin-right: 30px;
+}
+
+.sbtn-left {
+  transform: rotate(180deg);
+}
+
+.speak__item {
+  margin-right: 80px; 
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  @include desktop {
+    margin-right: 20px;
+  }
+}
+
+.speak__item-about {
+  display: flex;
+  margin-left: 85px;
+  color: white;
+  @include phones {
+    margin-left: 0px;
+  }
+}
+
+.speak__item-photo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 27px;
+}
+
+.speak__item-text {
+  width: 425px;
+  display: flex;
+  min-height: 100px;
+  margin-bottom: 20px;
+  color: white;
+
+  &::before {
+    content: svg-load('../../images/icons/quote.svg' width=80px, height=80px, fill=#313131, fill-opacity=0.5);
+    margin-right: 20px;
+  }
+  @include desktop-castom {
+    width: 362px;
+
+    &::before {
+      content: svg-load('../../images/icons/quote.svg' width=30px, height=30px, fill=#313131, fill-opacity=0.5);
+      margin-right: 10px;
+    }
+  }
+  @include phones {
+    width: 260px;
+  }
+}
+
+.speak__item-name {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sspeak__item-position.text {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #535354;
+}
+
+.speak-btn--disabled {
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #535354;
+}

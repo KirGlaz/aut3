@@ -1,0 +1,123 @@
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.nav__header {
+  padding: 0px 20px 0px 20px;
+  @include tablets {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  margin-left: 65px;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+  @include desktop {
+    margin-left: 38px;
+    font-size: 15px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+  @include tablets {
+    margin-left: 63px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+
+    &:nth-child(5) {
+      margin-left: 0px;
+    }
+    margin-bottom: 28px;
+
+    &:nth-child(5) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(6) {
+      margin-bottom: 0px;
+    }
+  }
+  @include tablets-castomone {
+    &:nth-child(5) {
+      margin-left: 0px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 0px;
+    }
+    margin-bottom: 28px;
+
+    &:nth-child(5) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(6) {
+      margin-bottom: 0px;
+    }
+  }
+  @include phones {
+    margin-left: 82px;
+  }
+}
+
+.nav__link {
+  &:hover {
+    color: #d7861f;
+  }
+}
+
+.socials {
+  @include tablets {
+    margin-right: 118px;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.socials__list {
+  display: flex;
+}
+
+.socials__item {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+  @include tablets {
+    margin-left: 44px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+.socials__link-pic {
+  width: 28px;
+  fill: #6f6b67;
+
+  &:hover {
+    fill: #d7861f;
+  }
+}

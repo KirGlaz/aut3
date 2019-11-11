@@ -1,0 +1,23 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 74px;
+  right: 0;
+  z-index: 5;
+  @include tablets {
+    display: block;
+    right: 10px;
+  }
+  @include phones {
+    right: 37px;
+  }
+}
+
+.hamburger__line {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 4px;
+}

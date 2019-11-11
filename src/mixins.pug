@@ -1,0 +1,51 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className)
+
+mixin nav(className, classNametwo)
+  - var section = [{"text": 'Главная', 'link': "#s1"}, {"text": 'Обо мне', 'link': "#s2"}, {"text": 'Навыки', 'link': "#s3"}, {"text": 'Работы', 'link': "#s4"}, {"text": 'Отзывы', 'link': "#speak"}, {"text": 'Связаться', 'link': "#s6"}]
+    nav(class=`${className} ${classNametwo}`)        
+      ul(class=`${className}__list`)            
+        each sec in section
+          li(class=`${className}__item`)
+            a(class=`${className}__link` href=sec.link)= sec.text
+
+mixin info(className, items)
+  div(class=`${className}`)
+    .information
+      ul(class=`${className}__list`)
+        each item in items
+          li(class=`${className}__item`)
+            div(class=`${className}__text`)= item
+
+mixin infoabout(className, items)
+  div(class=`${className}`)
+    .information
+      ul(class=`${className}__list`)
+        each item in items
+          li(class=`${className}__item`)
+            div(class=`${className}__text`)= item
+
+mixin rewiews(className, items)
+  each item in items
+    div(class=`${className}`)= item                 
+
+
+mixin sign(className, items, prof)
+  div(class=`${className}`)        
+    div(class=`${className}__info`)
+      each item in items
+        each pro in prof
+          div(class=`${className}__name`)= item
+          div(class=`${className}__profession`)= pro
+
+mixin hashtags(className, texts)
+  div(class=`${className}`)        
+    ul(class=`${className}__list`)            
+      each text in texts
+        li(class=`${className}__item`)
+          div(class=`${className}__text`)= text
