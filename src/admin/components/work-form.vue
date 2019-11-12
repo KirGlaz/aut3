@@ -154,20 +154,36 @@ export default {
       }
     },
     ...mapActions("works", ["addWork"]),
+    ...mapActions("tooltip", ["showTooltip"]),
     async addNewWork() {
       try {
-        await this.addWork(this.work);
+        await this.addWork(this.work);        
+        this.showTooltip({
+          type: 'success',
+          text: "Успешно!"
+      });
       } catch (error) {
-        alert(error.message);
-      }
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в добавлении работы!"
+      });
+    }
     },
+    ...mapActions("tooltip", ["showTooltip"]),
     async sendForm() {
-      const success = await this.$validate();
-      console.log("success", success);
+      const success = await this.$validate();      
       if (success) {
         this.addNewWork();
+        this.showTooltip({
+          type: 'success',
+          text: "Работа добавлена!"
+      }); 
       } else {
-        console.log("Ошибка в заполнении формы!");
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в заполнении формы!"
+        })           
+          console.log ("Ошибка в заполнении формы!")          
       }
     },
     fillFormWithCurrentWorkData() {

@@ -72,10 +72,11 @@ new Vue({
         }
     },
     created() {
-        //const data = require('../data/works.json');
+        const data = require('../data/works.json');
+        this.works = this.makeArrWithRequiredImages(data) 
         fetch("https://webdev-api.loftschool.com/works/192")
         .then(response => {
-        return response.json();
+        return response.json();        
       })
       .then(data => {
         this.works = this.makeArrWithRequiredImages(data)        

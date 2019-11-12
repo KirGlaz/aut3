@@ -56,14 +56,22 @@ export default {
   },
   methods: {
     ...mapActions("skills", ["addSkill"]),
+    ...mapActions("tooltip", ["showTooltip"]),
     async addNewSkill() {
       this.formBlocked = true;
       try {
         await this.addSkill(this.skill);
         this.skill.title = "";
         this.skill.percent = "";
+        this.showTooltip({
+          type: 'success',
+          text: "Скилл успешно добавлен!"
+      });
       } catch (error) {
-        // errors
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в добавлении скилла!"
+      });
       } finally {
         this.formBlocked = false;
       }

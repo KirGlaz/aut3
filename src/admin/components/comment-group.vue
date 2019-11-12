@@ -43,11 +43,20 @@ export default {
         this.NONS(this.comment.id);
         this.$emit("updateComment");
     },
+    ...mapActions("tooltip", ["showTooltip"]),
     async removeExistedComment(payload) {
-      console.log(payload);
+       this.showTooltip({
+          type: 'success',
+          text: "Удалено!"
+      });
       try {
         await this.removeComments(payload);
-      } catch (error) {}
+      } catch (error) {
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка!"
+      });
+      }
     }    
   }
 };

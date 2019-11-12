@@ -36,11 +36,19 @@ export default {
   },
   methods: {
     ...mapActions("categories", ["addCategory", "fetchCategories"]),
+    ...mapActions("tooltip", ["showTooltip"]),  
     async addNewCategory() {
       try {
         await this.addCategory(this.title);
+        this.showTooltip({
+          type: 'success',
+          text: "Категория добавлена!"
+      }); 
       } catch (error) {
-        alert(error.message);
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в добавлении категории!"
+        })   
       }
     }
   }

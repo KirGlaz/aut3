@@ -6,8 +6,7 @@ script(type="text/x-template")#slider-container
       :currentWork="currentWork"
       :currentIndex="currentIndex"
       @slide="handleSlide"
-    )
-    pre {{currentWork}}
+    )    
     info(
       :currentWork="currentWork"
     )
@@ -16,8 +15,7 @@ script(type="text/x-template")#slider-display
   .works-slider__pics(:data-slide="currentIndex + 1")
     .works-slider__pics-content
       .works-slider__fullpic-container        
-        img(:src="currentWork.photo").works-slider__fullpic
-        pre {{currentWork.photo}}
+        img(:src="currentWork.photo").works-slider__fullpic        
         btns(
           @slide="$emit('slide', $event)"
         )

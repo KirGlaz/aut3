@@ -39,17 +39,26 @@ export default {
   },
   methods: {
     ...mapActions("works", ["removeWorks"]),
-    ...mapMutations("works", ["NON"]),    
+    ...mapMutations("works", ["NON"]),  
+    ...mapActions("tooltip", ["showTooltip"]),  
     updateWork() {     
       console.log("works") 
         this.NON(this.work.id);
         this.$emit("updateWork");
     },
     async removeExistedWork(payload) {
-      console.log(payload);
+      this.showTooltip({
+          type: 'success',
+          text: "Работа удалена!"
+      }); ;
       try {
         await this.removeWorks(payload);
-      } catch (error) {}
+      } catch (error) {
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в удалении работы!"
+        })   
+      }
     }    
   }
 };

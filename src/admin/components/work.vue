@@ -57,7 +57,7 @@ export default {
       this.mode = "edit";
       this.show = true;
     },
-     ...mapActions("works", ["fetchWorks"]),
+     ...mapActions("works", ["fetchWorks"]),        
   }
 };
 </script>

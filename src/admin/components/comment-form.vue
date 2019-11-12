@@ -145,20 +145,36 @@ export default {
       }
     },
     ...mapActions("comments", ["addComment"]),
+    ...mapActions("tooltip", ["showTooltip"]),
     async addNewComment() {
       try {
         await this.addComment(this.comment);
+        this.showTooltip({
+          type: 'success',
+          text: "Успешно!"
+      });
       } catch (error) {
-        alert(error.message);
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка в добавлении отзыва!"
+      });
       }
     },
+    ...mapActions("tooltip", ["showTooltip"]),
     async commentForm() {
       const success = await this.$validate();
       console.log("success", success);
       if (success) {
         this.addNewComment();
+        this.showTooltip({
+          type: 'success',
+          text: "Успешно!"
+      });
       } else {
-        console.log("Ошибка в заполнении формы!");
+        this.showTooltip({
+          type: 'error',
+          text: "Ошибка!"
+      });
       }
     },
     fillFormWithCurrentCommentData() {      

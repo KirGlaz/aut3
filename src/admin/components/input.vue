@@ -10,7 +10,7 @@
       @input="$emit('input', $event.target.value)"
     ).input__elem.field__elem
     .input__error-tooltip
-      errors-tooltip(
+      tooltip(
         :errorText="errorText"
       )
 
@@ -26,7 +26,7 @@
       @input="$emit('input', $event.target.value)"
     )
     .input__error-tooltip
-      errors-tooltip(
+      tooltip(
         :errorText="errorText"
       )
 </template>
@@ -59,7 +59,7 @@ export default {
     }
   },
   components: {
-    errorsTooltip: () => import("./errors-tooltip")
+    tooltip: () => import("./tooltip")
   }
 };
 </script>

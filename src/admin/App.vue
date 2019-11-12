@@ -3,25 +3,47 @@
     adminheader
     navigation
     router-view 
-        
+    .tooltips-container(:class="{'showed' : showed}")
+        tooltip(type="error")
+    
 </template>
 
 <script>
 import { mapState, mapActions, mapGetters } from "vuex";
 import adminheader from "./components/adminheader.vue";
 import navigation from "./components/navigation.vue";
+import tooltip from "./components/tooltip.vue";
 
 export default {
   name: "app",
   components: {
     adminheader,
-    navigation,        
+    navigation,
+    tooltip
   },
   data() {
-    return {
-      
-    };
+    return {};
+  },
+  computed: {
+    ...mapState("tooltip", {
+      showed: state => state.showed
+    }),
+  },
+  methods: {
+    ...mapActions("tooltip", ["closeTooltip"])
+  },
+  watch: {
+    showed(value) {
+      if (value === true) {
+        let timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          this.closeTooltip();
+        }, 3000);
+      }
+    }
   }
+
 };
 </script>
 
@@ -127,6 +149,19 @@ img {
   font-size: 10px;
   color: red;
   height: 15px;
+}
+
+.tooltips-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 110%);
+  visibility: hidden;
+  transition: 0.3s;
+  &.showed {
+    transform: translate(-50%, 0%);
+    visibility: visible;
+  }
 }
 </style>
 
