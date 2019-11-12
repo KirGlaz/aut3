@@ -36,7 +36,7 @@
                                 .error {{this.validation.firstError('work.techs')}}
                         .form__row.form__row-btn
                             .form__btn(v-if="mode")
-                                button(type="button")#order.btn-cancel Отмена                          
+                                button(type="button" @click="closeForms")#order.btn-cancel Отмена                          
                                 button(type="submit")#order.btn-save Сохранить                            
 </template>
 
@@ -123,8 +123,7 @@ export default {
     }
   },
   methods: {
-    sendData () {
-      console.log("send")
+    sendData () {      
       this.mode === "add" ? this.sendForm() : this.updateWork()
       this.$emit("closeForm")
     },
@@ -193,7 +192,10 @@ export default {
     },
     clearFormFields() {
       this.work = {};
-    }
+    },
+    closeForms() {      
+      this.$emit("closeForm")      
+    }    
   }
 };
 </script>

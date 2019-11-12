@@ -35,7 +35,7 @@
                               .error {{this.validation.firstError('comment.text')}}                    
                       .form__row.form__row-btn
                           .form__btn
-                            button#order.btn-cancel(type="button") Отмена                          
+                            button#order.btn-cancel(type="button" @click="closeForms") Отмена                          
                             button#order.btn-save(type="submit") Сохранить  
 </template>
 
@@ -183,7 +183,10 @@ export default {
     },
     clearFormFields() {
       this.comment = {};
-    }
+    },
+    closeForms() {      
+      this.$emit("closeForm")      
+    }  
   }
 };
 </script>
